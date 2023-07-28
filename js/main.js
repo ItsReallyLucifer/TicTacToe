@@ -3,6 +3,7 @@ let restartBtn = document.getElementById('restartBtn')
 let boxes = Array.from(document.getElementsByClassName('box'))
 
 let winnerIndicator = getComputedStyle(document.body).getPropertyValue('--winning-blocks')
+let drawIndicator = getComputedStyle(document.body).getPropertyValue('--draw-blocks')
 
 const O_TEXT = "O"
 const X_TEXT = "X"
@@ -30,6 +31,11 @@ function boxClicked(e) {
         }
         count_plays++
         currentPlayer = currentPlayer == X_TEXT ? O_TEXT : X_TEXT
+    }
+
+    if(count_plays ===9) {
+        playerText.innerHTML = 'Draw Game!'
+        boxes.forEach(box => box.style.color = drawIndicator)
     }
 }
 
@@ -59,10 +65,11 @@ restartBtn.addEventListener('click', restart)
 
 function restart() {
     spaces.fill(null)
-
+    count_plays = 0
     boxes.forEach( box => {
         box.innerText = ''
         box.style.backgroundColor=''
+        box.style.color = 'orange'
     })
 
     playerText.innerHTML = 'Tic Tac Toe'
