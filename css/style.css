@@ -5,16 +5,16 @@
 }
 
 :root {
-    --primary-color: #3c91e6;
-    --secondary-color: #44db5e;
-    --winning-blocks: #f2ca3b;
-    --draw-blocks: #f26666;
+    --primary-color: #FF6EFF;
+    --secondary-color: #3EFF3E;
+    --winning-blocks: #FFFF00;
+    --draw-blocks: #FF0000;
 }
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
-    color: #333;
+    background-color: #1a1a1a;
+    color: #fff;
 }
 
 .container {
@@ -31,6 +31,7 @@ h1 {
     text-transform: uppercase;
     color: var(--primary-color);
     margin-bottom: 30px;
+    text-shadow: 0 0 10px var(--primary-color);
 }
 
 #gameboard {
@@ -46,23 +47,26 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: #000;
     font-size: 72px;
     background-color: var(--primary-color);
-    border-radius: 15px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 110, 255, 0.7);
 }
 
 .box:hover {
     background-color: var(--secondary-color);
+    color: #000;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
 }
 
 button {
     padding: 10px 20px;
     border-radius: 5px;
     background-color: var(--secondary-color);
-    color: #fff;
+    color: #000;
     font-size: 18px;
     border: none;
     cursor: pointer;
@@ -72,4 +76,5 @@ button {
 
 button:hover {
     background-color: var(--primary-color);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
 }
