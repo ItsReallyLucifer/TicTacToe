@@ -16,8 +16,8 @@ body {
     background-color: #1a1a1a;
     color: #fff;
     background-image: url('../imgs/neon1.jpg');
-    background-size: cover; /* Adjust this property to control how the image covers the background */
-    background-position: center; /* You can change this to position the image */
+    background-size: cover; 
+    background-position: center;
 }
 
 .container {
