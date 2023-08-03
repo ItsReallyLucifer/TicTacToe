@@ -15,6 +15,9 @@ body {
     font-family: 'Arial', sans-serif;
     background-color: #1a1a1a;
     color: #fff;
+    background-image: url('../imgs/neon1.jpg');
+    background-size: cover; /* Adjust this property to control how the image covers the background */
+    background-position: center; /* You can change this to position the image */
 }
 
 .container {
@@ -32,6 +35,8 @@ h1 {
     color: var(--primary-color);
     margin-bottom: 30px;
     text-shadow: 0 0 10px var(--primary-color);
+    margin-bottom: 120px;
+    margin-left: 60px;
 }
 
 #gameboard {
@@ -40,6 +45,8 @@ h1 {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5px;
     margin-top: 40px;
+    margin-bottom: 100px;
+    
 }
 
 .box {
